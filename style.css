@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+}
+#container{
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.squares{
+    width: 100%;
+    height: 100%;   
+    border: 1px solid black;
+    text-align: center;
+    
+    background-size: cover;
+}
