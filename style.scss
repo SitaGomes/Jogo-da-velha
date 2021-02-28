@@ -7,11 +7,28 @@
 }
 
 
+.greetings{
+    text-align: center;
+    font-size: $textFont;
+    background-color: $mainColor;
+    border-radius: 0px 0px 35px 35px;
+    padding: 20px;
+    color: $secondColor;
+    h1{
+        font-size: $titleFont;
+    }
+}
+
+#final-result{
+    font-size: $textFont;
+    text-align: center;
+}
+
 #wrapper{
     position: relative;
     width: $wrapper;
     height: $wrapper;
-    margin: auto;    
+    margin: auto;  
     border: 1px solid black;
     top: -100%;
     transform: translateY(50%);
@@ -39,7 +56,20 @@
 
 }
 
-#final-result{
-    font-size: 1.2rem;
-    text-align: center;
+
+
+@media only screen and (max-width: 31.5625em){
+
+    #wrapper{
+        width: $wrapperMobile;
+        height: $wrapperMobile;
+    }
+
+    .container{
+        width: $containerMobileWidth;
+        height: $containerMobileHeight;
+    }
+
+    
+
 }

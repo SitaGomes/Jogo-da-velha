@@ -5,6 +5,24 @@
           box-sizing: border-box;
 }
 
+.greetings {
+  text-align: center;
+  font-size: 2rem;
+  background-color: #ff9d00;
+  border-radius: 0px 0px 35px 35px;
+  padding: 20px;
+  color: white;
+}
+
+.greetings h1 {
+  font-size: 3.2rem;
+}
+
+#final-result {
+  font-size: 2rem;
+  text-align: center;
+}
+
 #wrapper {
   position: relative;
   width: 30rem;
@@ -39,8 +57,14 @@
   background-color: lightblue;
 }
 
-#final-result {
-  font-size: 1.2rem;
-  text-align: center;
+@media only screen and (max-width: 31.5625em) {
+  #wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    width: 100%;
+    height: 33.3%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
