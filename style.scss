@@ -1,0 +1,40 @@
+@import './Extra/_variables.scss/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#wrapper{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    margin: auto;    
+    border: 1px solid black;
+    top: -100%;
+    transform: translateY(50%);
+
+
+}
+
+.container{
+    width: 30rem;
+    height: 10rem;
+    border: 1px solid black;
+    display: flex;
+}
+
+.squares{
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+
+    &:hover{
+        background-color: $squaresHover;
+    }
+
+}
+
+
