@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Jogo da Velha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Tic-Tac-Toe</title>
 </head>
 
 <body>
-    <h1>Jogo Da Velha</h1>
-    <p>tente fazer uma fila com 'X' ou 'O' para ganhar</p>
-    <min>
-        <div id="container">
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
-            <div class="squares" onclick="jogada(this)"></div>
+    <div id="wrapper">
+        <!-- Primeira fileira -->
+        <div class="container">
+            <div class="squares" onclick="play(this)"></div>
+            <div class="squares" onclick="play(this)"></div>
+            <div class="squares" onclick="play(this)"></div>
         </div>
-    </min>
 
+        <!-- Segunda fileira -->
+        <div class="container">
+            <div class="squares" onclick="play(this)"></div>
+            <div class="squares" onclick="play(this)"></div>
+            <div class="squares" onclick="play(this)"></div>
+        </div>
+
+        <!-- Terceira fileira -->
+        <div class="container">
+            <div class="squares" onclick="play(this)"></div>
+            <div class="squares" onclick="play(this)"></div>
+            <div class="squares" onclick="play(this)"></div>
+        </div>
+        <div id="final-result">
+            <p id="winner"></p>
+        </div>
+    </div>
 
     <script src="/script.js"></script>
 </body>
