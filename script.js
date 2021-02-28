@@ -1,7 +1,11 @@
 let turnToggle = true;
-let turn, winner
+let gameOver = false
+let moves = 0
+let turn, winner = ''
 
 
+
+const pWinner = document.querySelector('#winner')
 const wrapper = document.querySelector('#wrapper')
 const container = document.querySelectorAll('.container')
 const squares = document.querySelectorAll('.squares')
@@ -11,11 +15,21 @@ const path = [
     '', '', '',
     '', '', ''
 ]
+const winningPath = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+]
 
 function play(element) {
 
-    if (element.innerText != '') {
-        alert('Sua jogada já foi feita!')
+    if ((element.innerText != '') || (gameOver)) {
+        alert('Jogada inválida')
     } else {
 
         //* Checking turns
@@ -38,8 +52,13 @@ function play(element) {
                 break
         }
         filter()
-        gameOver()
+        moves += 1
+
+        gameCheck('O')
+        gameCheck('X')
     }
+
+    pWinner.innerText = `O vencedor é o jogador: ${winner}`
 }
 
 //* Filtering the index of each played square
@@ -52,43 +71,28 @@ function filter() {
     }
 }
 
-//* Winning Path
-/*
-012, 345, 678
-036, 147, 258
-058, 256
-*/
-function gameOver() {
 
-    if ((path[0] === path[1]) && (path[0] === path[2]))
-        winner = path[0]
+function gameCheck(element) {
 
-    else if ((path[3] === path[4]) && (path[3] === path[5]))
-        winner = path[3]
+    //*If the game isn't over yet
+    if (moves >= 5) {
 
-    else if ((path[6] === path[7]) && (path[6] === path[8]))
-        winner = path[6]
+        for (let i = 0; i < winningPath.length; i++) {
+            let winningRow = winningPath[i]
+            let p = path[winningRow[0]]
+            let p2 = path[winningRow[1]]
+            let p3 = path[winningRow[2]]
 
-    else if ((path[0] === path[3]) && (path[0] === path[6]))
-        winner = path[0]
-
-    else if ((path[1] === path[4]) && (path[1] === path[7]))
-        winner = path[1]
-
-    else if ((path[2] === path[5]) && (path[2] === path[8]))
-        winner = path[2]
-
-    else if ((path[0] === path[5]) && (path[0] === path[8]))
-        winner = path[0]
-
-    else if ((path[2] === path[5]) && (path[2] === path[6]))
-        winner = path[2]
-
-    else
-        winner = 'draw'
-
-    console.log(winner)
+            //*If all p's are equal AND have the same value 'element'
+            if ((p === p2 && p2 === p3 && p === p3) && (p && p2 && p3 === element)) {
+                winner = p
+                gameOver = true
+                console.log('Dentro do Loop')
+            } else {
+                if ((!gameOver) && (winner === '') && (path[i] != ''))
+                    winner = 'Empate'
+            }
+        }
+    }
 }
-
-
 
