@@ -5,8 +5,6 @@
     width: $wrapper;
     height: $wrapper;
     margin: 3rem auto;  
-    
-    
 }
 
 .container{
@@ -14,11 +12,10 @@
     height: $containerHeight;
     display: flex;
 
-
 }
 
 .squares{
-    @include flex-center;
+    @include flex-center (no-wrap);
     width: $squares;
     height: $squares;
     border: 1px solid black;
@@ -35,22 +32,22 @@
 
 /* Making the box more Tic-Tac-Toe like */
 
-//* First Row
+//* First Column
 #p1, #p4, #p6{
     border-left-style: none;
 }
 
-//* Third Row
+//* Third Column
 #p3, #p5, #p8{
     border-right-style: none;
 }
 
-//*First Column
+//*First Row
 #p1, #p2, #p3{
     border-top-style: none;
 }
 
-//*Third Column
+//*Third Row
 #p6, #p7, #p8{
     border-bottom-style: none;
 }
