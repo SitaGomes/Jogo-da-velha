@@ -1,47 +1,24 @@
-@import './Extra/_variables.scss/variables';
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.greetings{
-    text-align: center;
-    font-size: $textFont;
-    background-color: $mainColor;
-    border-radius: 0px 0px 35px 35px;
-    padding: 20px;
-    color: $secondColor;
-    h1{
-        font-size: $titleFont;
-    }
-}
-
-#final-result{
-    font-size: $textFont;
-    text-align: center;
-}
+@import './mixins';
 
 #wrapper{
     position: relative;
     width: $wrapper;
     height: $wrapper;
-    margin: auto;  
-    border: 1px solid black;
-    top: -100%;
-    transform: translateY(50%);
+    margin: 3rem auto;  
+    
+    
 }
 
 .container{
     width: $containerWidth;
     height: $containerHeight;
-    border: 1px solid black;
     display: flex;
+
+
 }
 
 .squares{
+    @include flex-center;
     width: $squares;
     height: $squares;
     border: 1px solid black;
@@ -49,20 +26,42 @@
     font-size: $squares;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-
+    
     &:hover{
-        background-color: $squaresHover;
+        background-color: $mainColor;
     }
-
+    
 }
 
+/* Making the box more Tic-Tac-Toe like */
 
+//* First Row
+#p1, #p4, #p6{
+    border-left-style: none;
+}
 
+//* Third Row
+#p3, #p5, #p8{
+    border-right-style: none;
+}
+
+//*First Column
+#p1, #p2, #p3{
+    border-top-style: none;
+}
+
+//*Third Column
+#p6, #p7, #p8{
+    border-bottom-style: none;
+}
+
+/* 505px --> Mobile Only */
 @media only screen and (max-width: 31.5625em){
 
     #wrapper{
         width: $wrapperMobile;
         height: $wrapperMobile;
+        
     }
 
     .container{
@@ -70,6 +69,7 @@
         height: $containerMobileHeight;
     }
 
-    
-
+    .squares{
+        font-size: $squares - 5rem;
+    }
 }

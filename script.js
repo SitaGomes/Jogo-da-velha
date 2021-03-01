@@ -87,7 +87,7 @@ function gameCheck(element) {
             if ((p === p2 && p2 === p3 && p === p3) && (p && p2 && p3 === element)) {
                 winner = p
                 gameOver = true
-                console.log('Dentro do Loop')
+
             } else {
                 if ((!gameOver) && (winner === '') && (path[i] != ''))
                     winner = 'Empate'
