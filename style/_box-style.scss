@@ -1,0 +1,75 @@
+@import './mixins';
+
+#wrapper{
+    position: relative;
+    width: $wrapper;
+    height: $wrapper;
+    margin: 3rem auto;  
+    
+    
+}
+
+.container{
+    width: $containerWidth;
+    height: $containerHeight;
+    display: flex;
+
+
+}
+
+.squares{
+    @include flex-center;
+    width: $squares;
+    height: $squares;
+    border: 1px solid black;
+    text-align: center;
+    font-size: $squares;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    
+    &:hover{
+        background-color: $mainColor;
+    }
+    
+}
+
+/* Making the box more Tic-Tac-Toe like */
+
+//* First Row
+#p1, #p4, #p6{
+    border-left-style: none;
+}
+
+//* Third Row
+#p3, #p5, #p8{
+    border-right-style: none;
+}
+
+//*First Column
+#p1, #p2, #p3{
+    border-top-style: none;
+}
+
+//*Third Column
+#p6, #p7, #p8{
+    border-bottom-style: none;
+}
+
+/* 505px --> Mobile Only */
+@media only screen and (max-width: 31.5625em){
+
+    #wrapper{
+        width: $wrapperMobile;
+        height: $wrapperMobile;
+        
+    }
+
+    .container{
+        width: $containerMobileWidth;
+        height: $containerMobileHeight;
+    }
+
+    .squares{
+        font-size: $squares - 5rem;
+    }
+}
