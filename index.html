@@ -7,41 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="icon" href="./extra/svg/hashtag-solid.svg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
     <title>Jogo da velha</title>
 </head>
 
 <body>
 
+    <section class="greetings">
+
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gamepad"
+            class="svg-inline--fa fa-gamepad fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 512">
+            <path fill="rgb(255, 249, 252)"
+                d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z">
+            </path>
+        </svg>
+
+        <h1>Jogo da Velha</h1>
+
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gamepad"
+            class="svg-inline--fa fa-gamepad fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 512">
+            <path fill="rgb(255, 249, 252)"
+                d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z">
+            </path>
+        </svg>
+
+    </section>
+
+    <br><br>
+
     <main>
-
-        <div class="greetings">
-            <div>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gamepad"
-                    class="svg-inline--fa fa-gamepad fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 640 512">
-                    <path fill="rgb(255, 249, 252)"
-                        d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z">
-                    </path>
-                </svg>
-            </div>
-
-            <div>
-                <h1>Jogo da Velha</h1>
-            </div>
-
-            <div>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gamepad"
-                    class="svg-inline--fa fa-gamepad fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 640 512">
-                    <path fill="rgb(255, 249, 252)"
-                        d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z">
-                    </path>
-                </svg>
-            </div>
-        </div>
-        <br><br>
-
         <div id="wrapper">
 
             <!-- Primeira fileira -->
@@ -68,11 +66,56 @@
         </div>
     </main>
 
-    <div id="final-result">
-        <p id="winner"></p>
-    </div>
+    <section class="reset-btn">
+        <button onclick="resetPlay()">
+            <h2>Repetir</h2>
+        </button>
+    </section>
 
+    <br><br><br>
+
+    <section id="final-result">
+        <p id="winner"></p>
+    </section>
+
+    <br><br><br>
+
+    <section class="leaderBoard">
+
+        <h2>Tabela de liderança</h2>
+
+        <div class=" leaderBoard-values">
+            <p>Jogador X ganhou <span id="playerX">0</span> Vezes </p>
+
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy"
+                class="svg-inline--fa fa-trophy fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512">
+                <path fill="rgb(255, 157, 0)"
+                    d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z">
+                </path>
+            </svg>
+        </div>
+
+
+        <div class="leaderBoard-values">
+            <p>Jogador O ganhou <span id="playerO">0</span> Vezes </p>
+
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy"
+                class="svg-inline--fa fa-trophy fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512">
+                <path fill="rgb(255, 157, 0)"
+                    d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z">
+                </path>
+            </svg>
+
+        </div>
+
+        <button onclick="resetLeaderBoard()">Zerar a tabela</button>
+    </section>
+
+    <br><br><br><br>
     <script src="/script.js"></script>
+    <script src="/funcitons.js"></script>
 </body>
 
 </html>

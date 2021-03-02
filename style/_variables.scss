@@ -1,5 +1,6 @@
 $mainColor: rgb(255, 157, 0);
 $secondColor: rgb(255, 253, 254);
+$hoverColor: $mainColor - rgb(30, 30, 30);
 
 
 $wrapper: 30rem;
@@ -9,8 +10,10 @@ $containerHeight: 10rem;
 
 $squares: 10rem;
 
+$border: 2rem 2rem 2rem 2rem;
 
-$textFont: 2rem;
+
+$textFont: 1.2rem;
 $titleFont: 3.2rem;
 
 //!Mobile

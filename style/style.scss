@@ -32,12 +32,97 @@ body{
     }
 }
 
+.reset-btn{
+    @include max-width;
+    text-align: center;
+    
+    button{
+        border-radius: 2rem;
+        padding: 10px 20px;
+        color: $secondColor;
+        background-color: $mainColor;
+        border-style: none;
+        font-size: $textFont;
+        outline: 0;
+
+
+        &:hover, 
+        &:focus{
+            @include hover-focus;
+        }
+    }
+}
+
+
 #final-result{
     font-size: $textFont;
     text-align: center;
-
-
 }
+
+
+.leaderBoard{
+    @include max-width;
+    background-color: $mainColor;
+    border-radius: $border;
+    padding: 5px;
+    text-align: center;
+    
+    
+    h2{
+        color: $secondColor;
+        padding: 7px;
+    }
+    
+    button{
+        outline: none;
+        border: 2px solid $hoverColor;
+        border-radius: $border;
+        background-color: $mainColor;
+        padding: 7px;
+        color: $secondColor;
+        font-size: $textFont;
+        font-weight: 700;
+
+        &:hover,
+        &:focus{
+            @include hover-focus;
+        }
+    }
+
+    .leaderBoard-values{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+        background-color: $secondColor;
+        border-bottom: 5px solid $mainColor;
+        text-align: left;
+
+        p{
+            font-size: $textFont;
+            font-family: 'Montserrat', sans-serif;           
+        }
+
+        svg{
+            margin-left: 70%;
+            width: 40px;
+            padding-left: 15px;
+
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 505 --> Mobile */
 @media only screen and (max-width: 31.5625em){
