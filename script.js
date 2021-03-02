@@ -3,12 +3,13 @@ let gameOver = false
 
 let moves = 0
 
-let turn = ''
+let turn = 'O'
 let winner = ''
 
 localStorage.setItem('valor_x', '0')
 localStorage.setItem('valor_o', '0')
 
+const playingNow = document.querySelector('#playingNow')
 const jogadorX = document.querySelector('#playerX')
 const jogadorO = document.querySelector('#playerO')
 
@@ -38,6 +39,8 @@ function play(element) {
     if ((element.innerText != '') || (gameOver)) {
         alert('Jogada inválida')
     } else {
+
+        checkPlay(turn)
 
         //* Checking turns
         switch (turnToggle) {
@@ -163,6 +166,9 @@ function resetLeaderBoard() {
     //* Updating the values
     jogadorX.innerHTML = localStorage.valor_x
     jogadorO.innerHTML = localStorage.valor_o
+}
 
-
+//* Checking who's next playing
+function checkPlay(element) {
+    playingNow.innerText = `Proximo a jogar: ${element}`
 }

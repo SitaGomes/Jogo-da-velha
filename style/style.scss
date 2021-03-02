@@ -32,6 +32,13 @@ body{
     }
 }
 
+#playingNow{
+    @include flex-center(nowrap);
+    font-size: $textFont;
+    color: $mainColor;
+}
+
+
 .reset-btn{
     @include max-width;
     text-align: center;
@@ -57,6 +64,7 @@ body{
 #final-result{
     font-size: $textFont;
     text-align: center;
+    color: $mainColor;
 }
 
 
@@ -113,17 +121,6 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* 505 --> Mobile */
 @media only screen and (max-width: 31.5625em){
 
@@ -134,6 +131,16 @@ body{
             width: 70px;
         }
     }
+
+    .leaderBoard{
+        .leaderBoard-values{
+            svg{
+                margin-left: 40%;
+            }
+        }
+    }
+
+
 
 
 }
