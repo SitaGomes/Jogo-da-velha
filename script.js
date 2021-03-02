@@ -70,10 +70,10 @@ function play(element) {
     pWinner.innerText = `O vencedor é o jogador: ${winner}`
 }
 
-//* Filtering the index of each played square
 function filter() {
     for (let i = 0; i < squares.length; i++) {
 
+        //* Filtering the index of each played square
         if (squares[i].innerText != '') {
             path[i] = squares[i].innerText
         }
@@ -103,6 +103,8 @@ function gameCheck(element) {
                 gameOver = true
 
             } else {
+
+                //? not really working correctly tho
                 if ((!gameOver) && (winner === '') && (path[i] != ''))
                     winner = 'Empate'
             }
@@ -154,6 +156,13 @@ function resetPlay() {
 
 function resetLeaderBoard() {
 
+    //* Setting the value to 0
+    localStorage.valor_x = '0'
+    localStorage.valor_o = '0'
+
+    //* Updating the values
+    jogadorX.innerHTML = localStorage.valor_x
+    jogadorO.innerHTML = localStorage.valor_o
 
 
 }
