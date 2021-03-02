@@ -110,6 +110,22 @@ body {
   width: 100px;
 }
 
+#playingNow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-size: 1.2rem;
+  color: #ff9d00;
+}
+
 .reset-btn {
   width: 100%;
   max-width: 500px;
@@ -135,6 +151,7 @@ body {
 #final-result {
   font-size: 1.2rem;
   text-align: center;
+  color: #ff9d00;
 }
 
 .leaderBoard {
@@ -197,6 +214,9 @@ body {
   }
   .greetings svg {
     width: 70px;
+  }
+  .leaderBoard .leaderBoard-values svg {
+    margin-left: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */
