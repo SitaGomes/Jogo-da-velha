@@ -6,3 +6,18 @@
 }
 
 
+@mixin max-width {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    
+}
+
+
+@mixin hover-focus {
+    &:hover,
+    &:focus{
+        background-color: $hoverColor;
+        cursor: pointer;
+    }
+}

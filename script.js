@@ -1,9 +1,16 @@
-let turnToggle = true;
+let turnToggle = true
 let gameOver = false
+
 let moves = 0
-let turn, winner = ''
 
+let turn = ''
+let winner = ''
 
+localStorage.setItem('valor_x', '0')
+localStorage.setItem('valor_o', '0')
+
+const jogadorX = document.querySelector('#playerX')
+const jogadorO = document.querySelector('#playerO')
 
 const pWinner = document.querySelector('#winner')
 const wrapper = document.querySelector('#wrapper')
@@ -56,6 +63,8 @@ function play(element) {
 
         gameCheck('O')
         gameCheck('X')
+
+        leaderBoard(winner)
     }
 
     pWinner.innerText = `O vencedor é o jogador: ${winner}`
@@ -74,9 +83,14 @@ function filter() {
 
 function gameCheck(element) {
 
-    //*If the game isn't over yet
+    //*If it's the 5th turn
     if (moves >= 5) {
 
+        /*
+            WinningRow has the index for the victory scenarios;
+            p, p2 and p3 compare the victory scenarios indexes, 
+                with the actual placed 'X' and 'O'.
+        */
         for (let i = 0; i < winningPath.length; i++) {
             let winningRow = winningPath[i]
             let p = path[winningRow[0]]
@@ -96,3 +110,50 @@ function gameCheck(element) {
     }
 }
 
+function leaderBoard(element) {
+
+    //* Only if the game is over
+    if (gameOver) {
+
+        switch (element) {
+            //* Add +1 every time somebody wins
+
+            case 'X':
+                localStorage.valor_x = Number(localStorage.valor_x) + 1
+                break
+
+            case 'O':
+                localStorage.valor_o = Number(localStorage.valor_o) + 1
+                break
+
+            default:
+                break
+        }
+    }
+
+    jogadorX.innerHTML = localStorage.valor_x
+    jogadorO.innerHTML = localStorage.valor_o
+}
+
+
+function resetPlay() {
+
+    //* Take all the 'x' and 'o's
+    for (let i = 0; i < path.length; i++) {
+        path[i] = ''
+
+        squares[i].innerText = ''
+
+    }
+
+    //! The game is resetting
+    gameOver = false
+    winner = ''
+
+}
+
+function resetLeaderBoard() {
+
+
+
+}

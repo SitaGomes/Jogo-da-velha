@@ -110,9 +110,84 @@ body {
   width: 100px;
 }
 
-#final-result {
-  font-size: 2rem;
+.reset-btn {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
   text-align: center;
+}
+
+.reset-btn button {
+  border-radius: 2rem;
+  padding: 10px 20px;
+  color: #fffdfe;
+  background-color: #ff9d00;
+  border-style: none;
+  font-size: 1.2rem;
+  outline: 0;
+}
+
+.reset-btn button:hover:hover, .reset-btn button:hover:focus, .reset-btn button:focus:hover, .reset-btn button:focus:focus {
+  background-color: #e17f00;
+  cursor: pointer;
+}
+
+#final-result {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.leaderBoard {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  background-color: #ff9d00;
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 5px;
+  text-align: center;
+}
+
+.leaderBoard h2 {
+  color: #fffdfe;
+  padding: 7px;
+}
+
+.leaderBoard button {
+  outline: none;
+  border: 2px solid #e17f00;
+  border-radius: 2rem 2rem 2rem 2rem;
+  background-color: #ff9d00;
+  padding: 7px;
+  color: #fffdfe;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.leaderBoard button:hover:hover, .leaderBoard button:hover:focus, .leaderBoard button:focus:hover, .leaderBoard button:focus:focus {
+  background-color: #e17f00;
+  cursor: pointer;
+}
+
+.leaderBoard .leaderBoard-values {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  padding: 20px;
+  background-color: #fffdfe;
+  border-bottom: 5px solid #ff9d00;
+  text-align: left;
+}
+
+.leaderBoard .leaderBoard-values p {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.leaderBoard .leaderBoard-values svg {
+  margin-left: 70%;
+  width: 40px;
+  padding-left: 15px;
 }
 
 /* 505 --> Mobile */
