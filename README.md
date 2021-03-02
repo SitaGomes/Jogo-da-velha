@@ -8,6 +8,8 @@ Habilidades Melhoradas:
 - JS Asynchronous;
 - LocalStorage;
 - CSS grid display;
+- CSS box model;
+- UI e UX; 
 - SCSS mixins;
 - Organização e separação de codigo. 
 
