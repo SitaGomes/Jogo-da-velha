@@ -9,6 +9,8 @@ let winner = ''
 localStorage.setItem('valor_x', '0')
 localStorage.setItem('valor_o', '0')
 
+let dekoSong = document.querySelector('#dekoSong')
+
 const playingNow = document.querySelector('#playingNow')
 const jogadorX = document.querySelector('#playerX')
 const jogadorO = document.querySelector('#playerO')
@@ -172,3 +174,16 @@ function resetLeaderBoard() {
 function checkPlay(element) {
     playingNow.innerText = `Proximo a jogar: ${element}`
 }
+
+
+
+function playSong() {
+    dekoSong.play()
+    dekoSong.autoplay
+}
+
+function pauseSong() { dekoSong.pause() }
+
+function volumeDown() { dekoSong.volume -= 0.2 }
+
+function volumeUp() { dekoSong.volume += 0.2 }
