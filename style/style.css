@@ -18,14 +18,14 @@
   flex-wrap: no-wrap;
   width: 10rem;
   height: 10rem;
-  border: 1px solid black;
+  border: 1px solid #fffdfe;
   text-align: center;
   font-size: 10rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 .squares:hover {
-  background-color: #ff9d00;
+  background-color: #4680ff;
 }
 
 /* Making the box more Tic-Tac-Toe like */
@@ -65,7 +65,7 @@
   width: 100%;
   max-width: 500px;
   margin: auto;
-  background-color: #ff9d00;
+  background-color: #4680ff;
   border-radius: 2rem 2rem 2rem 2rem;
   padding: 5px;
   text-align: center;
@@ -76,16 +76,16 @@
 }
 .leaderBoard button {
   outline: none;
-  border: 2px solid #e68e02;
+  border: 2px solid #2f65da;
   border-radius: 2rem 2rem 2rem 2rem;
-  background-color: #ff9d00;
+  background-color: #4680ff;
   padding: 7px;
   color: #fffdfe;
   font-size: 1.2rem;
   font-weight: 700;
 }
 .leaderBoard button:hover:hover, .leaderBoard button:hover:focus, .leaderBoard button:focus:hover, .leaderBoard button:focus:focus {
-  background-color: #e68e02;
+  background-color: #2f65da;
   cursor: pointer;
 }
 .leaderBoard .leaderBoard-values {
@@ -93,7 +93,7 @@
   grid-template-columns: auto auto;
   padding: 20px;
   background-color: #fffdfe;
-  border-bottom: 5px solid #ff9d00;
+  border-bottom: 5px solid #4680ff;
   text-align: left;
 }
 .leaderBoard .leaderBoard-values p {
@@ -119,6 +119,8 @@
 
 body {
   background-color: #fffdfe;
+  background-image: url("../extra/images/5039684.jpg");
+  background-size: cover;
 }
 
 .greetings {
@@ -126,7 +128,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #ff9d00;
+  background-color: #4680ff;
   border-radius: 0px 0px 35px 35px;
   padding: 20px;
   color: #fffdfe;
@@ -146,7 +148,7 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   font-size: 1.2rem;
-  color: #ff9d00;
+  color: #4680ff;
 }
 
 .reset-btn {
@@ -159,20 +161,20 @@ body {
   border-radius: 2rem;
   padding: 10px 20px;
   color: #fffdfe;
-  background-color: #ff9d00;
+  background-color: #4680ff;
   border-style: none;
   font-size: 1.2rem;
   outline: 0;
 }
 .reset-btn button:hover:hover, .reset-btn button:hover:focus, .reset-btn button:focus:hover, .reset-btn button:focus:focus {
-  background-color: #e68e02;
+  background-color: #2f65da;
   cursor: pointer;
 }
 
 #final-result {
   font-size: 1.2rem;
   text-align: center;
-  color: #ff9d00;
+  color: #4680ff;
 }
 
 /* 505 --> Mobile */
