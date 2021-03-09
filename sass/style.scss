@@ -37,6 +37,7 @@ body{
 #playingNow{
     @include flex-center(nowrap);
     font-size: $textFont;
+    font-weight: 700;
     color: $mainColor;
 }
 
