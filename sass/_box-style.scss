@@ -1,4 +1,4 @@
-@import './mixins';
+@use './abstract/' as *;
 
 #wrapper{
     position: relative;

@@ -1,6 +1,5 @@
-@import './variables';
-@import './box-style';
-@import './mixins';
+@use './abstract' as *;
+@use './box-style';
 
 *{
     margin: 0;
