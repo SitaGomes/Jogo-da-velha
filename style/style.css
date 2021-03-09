@@ -18,6 +18,7 @@
   flex-wrap: no-wrap;
   width: 10rem;
   height: 10rem;
+  color: #fffdfe;
   border: 1px solid #fffdfe;
   text-align: center;
   font-size: 10rem;
@@ -148,6 +149,7 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   font-size: 1.2rem;
+  font-weight: 700;
   color: #4680ff;
 }
 

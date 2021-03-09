@@ -18,6 +18,7 @@
     @include flex-center (no-wrap);
     width: $squares;
     height: $squares;
+    color: $secondColor;
     border: 1px solid $secondColor;
     text-align: center;
     font-size: $squares;
