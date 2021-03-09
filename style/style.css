@@ -61,6 +61,55 @@
     font-size: 5rem;
   }
 }
+.leaderBoard {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  background-color: #ff9d00;
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 5px;
+  text-align: center;
+}
+.leaderBoard h2 {
+  color: #fffdfe;
+  padding: 7px;
+}
+.leaderBoard button {
+  outline: none;
+  border: 2px solid #e68e02;
+  border-radius: 2rem 2rem 2rem 2rem;
+  background-color: #ff9d00;
+  padding: 7px;
+  color: #fffdfe;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.leaderBoard button:hover:hover, .leaderBoard button:hover:focus, .leaderBoard button:focus:hover, .leaderBoard button:focus:focus {
+  background-color: #e68e02;
+  cursor: pointer;
+}
+.leaderBoard .leaderBoard-values {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+  background-color: #fffdfe;
+  border-bottom: 5px solid #ff9d00;
+  text-align: left;
+}
+.leaderBoard .leaderBoard-values p {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.leaderBoard .leaderBoard-values .wins {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.leaderBoard .leaderBoard-values .wins svg {
+  width: 40px;
+  padding-left: 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -126,51 +175,6 @@ body {
   color: #ff9d00;
 }
 
-.leaderBoard {
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-  background-color: #ff9d00;
-  border-radius: 2rem 2rem 2rem 2rem;
-  padding: 5px;
-  text-align: center;
-}
-.leaderBoard h2 {
-  color: #fffdfe;
-  padding: 7px;
-}
-.leaderBoard button {
-  outline: none;
-  border: 2px solid #e68e02;
-  border-radius: 2rem 2rem 2rem 2rem;
-  background-color: #ff9d00;
-  padding: 7px;
-  color: #fffdfe;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-.leaderBoard button:hover:hover, .leaderBoard button:hover:focus, .leaderBoard button:focus:hover, .leaderBoard button:focus:focus {
-  background-color: #e68e02;
-  cursor: pointer;
-}
-.leaderBoard .leaderBoard-values {
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 20px;
-  background-color: #fffdfe;
-  border-bottom: 5px solid #ff9d00;
-  text-align: left;
-}
-.leaderBoard .leaderBoard-values p {
-  font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
-}
-.leaderBoard .leaderBoard-values svg {
-  margin-left: 70%;
-  width: 40px;
-  padding-left: 15px;
-}
-
 /* 505 --> Mobile */
 @media only screen and (max-width: 31.5625em) {
   .greetings {
@@ -178,10 +182,6 @@ body {
   }
   .greetings svg {
     width: 70px;
-  }
-
-  .leaderBoard .leaderBoard-values svg {
-    margin-left: 40%;
   }
 }
 
