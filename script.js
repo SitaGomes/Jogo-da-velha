@@ -182,7 +182,7 @@ function checkPlay(element) {
 
 
 //! Music seq
-let musicOn = true
+let musicOn = false
 
 
 function playSong() {
