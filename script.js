@@ -10,6 +10,7 @@ localStorage.setItem('valor_x', '0')
 localStorage.setItem('valor_o', '0')
 
 let dekoSong = document.querySelector('#dekoSong')
+let popSong = document.createElement('AUDIO')
 
 const playingNow = document.querySelector('#playingNow')
 const jogadorX = document.querySelector('#playerX')
@@ -51,12 +52,14 @@ function play(element) {
                 turn = 'X'
                 element.innerText = turn
                 turnToggle = false;
+                touchSound()
                 break;
 
             case false:
                 turn = 'O'
                 element.innerText = turn;
                 turnToggle = true;
+                touchSound()
                 break
 
             default:
@@ -86,6 +89,7 @@ function filter() {
 }
 
 
+//! Game pad sec
 function gameCheck(element) {
 
     //*If it's the 5th turn
@@ -117,6 +121,24 @@ function gameCheck(element) {
     }
 }
 
+function resetPlay() {
+
+    //* Take all the 'x' and 'o's
+    for (let i = 0; i < path.length; i++) {
+        path[i] = ''
+
+        squares[i].innerText = ''
+
+    }
+
+    //? The game is resetting
+    gameOver = false
+    winner = ''
+
+}
+
+
+//! LeaderBoard sec
 function leaderBoard(element) {
 
     //* Only if the game is over
@@ -142,23 +164,6 @@ function leaderBoard(element) {
     jogadorO.innerHTML = localStorage.valor_o
 }
 
-
-function resetPlay() {
-
-    //* Take all the 'x' and 'o's
-    for (let i = 0; i < path.length; i++) {
-        path[i] = ''
-
-        squares[i].innerText = ''
-
-    }
-
-    //! The game is resetting
-    gameOver = false
-    winner = ''
-
-}
-
 function resetLeaderBoard() {
 
     //* Setting the value to 0
@@ -176,14 +181,40 @@ function checkPlay(element) {
 }
 
 
+//! Music seq
+let musicOn = true
+
 
 function playSong() {
     dekoSong.play()
-    dekoSong.autoplay
+    dekoSong.loop = true
+    musicOn = true
 }
 
-function pauseSong() { dekoSong.pause() }
 
-function volumeDown() { dekoSong.volume -= 0.2 }
+function pauseSong() {
+    dekoSong.pause()
+    musicOn = false
+}
 
-function volumeUp() { dekoSong.volume += 0.2 }
+
+function volumeDown() {
+    dekoSong.volume -= 0.2
+    popSong.volume -= 0.2
+}
+
+function volumeUp() {
+    dekoSong.volume += 0.2
+    popSong.volume += 0.2
+}
+
+function touchSound() {
+    if (popSong.canPlayType('audio/m4a')) {
+        popSong.setAttribute('src', './extra/audio/pop.m4a')
+    } else {
+        popSong.setAttribute('src', './extra/audio/pop.mp3')
+    }
+
+    if (musicOn)
+        popSong.play()
+}

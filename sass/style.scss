@@ -45,6 +45,14 @@ body{
 
     svg{
         width:40px;
+
+        &:checked,
+        &:hover{
+            transition: 650ms;
+            background-color: $mainColor;
+            padding: 10px;
+            
+        }
     }
 }
 
