@@ -1,4 +1,12 @@
+<div align=center>
+
 # **JOGO DA VELHA**
+
+</div>
+
+<div align=center>
+	<a href="game-da-velha.netlify.app/">Check The Game</a>
+</div>
 
 <p align="center" >
   Projecto feito na intenção de melhorar a manipulação do DOM e LocalStorage.
